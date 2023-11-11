@@ -1,0 +1,7 @@
+<div class="list" *ngIf="options">
+  <label class="item" *ngFor="let item of options">
+    <input type="checkbox" [value]="item.id" [checked]="checkSelected(item.id)" (change)="inputChange($event, item.id)" [disabled]="disabled"/>
+    <span>{{ item.name }}</span>
+  </label>
+</div>
+{{ _value }}

@@ -1,0 +1,27 @@
+<div class="wrap">
+  <form [formGroup]="form">
+  <div class="form-item">
+    <label for="name">Put name</label>
+    <input id="name" type="text" formControlName="name">
+  </div>
+
+    <div class="form-item">
+      <label>Check list</label>
+      <app-checkbox-list formControlName="list" [options]="options"> </app-checkbox-list>
+    </div>
+  </form>
+
+  <br>
+
+  <div class="title">Result:</div>
+  <div>Name: {{ form.value.name }} </div>
+  <div>List: {{ form.value.list  }}</div>
+
+  <br>
+  <button (click)="addListItem()">add list item</button>
+</div>
+
+
+
+
+
